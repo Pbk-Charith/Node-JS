@@ -8,3 +8,9 @@ const calculateSum = (a, b) => {
 }
 
 module.exports = {x, calculateSum};
+
+// console.log(module.exports);
+
+// you can use module exports like this also
+module.exports.x = x;
+module.exports.calculateSum = calculateSum;    
