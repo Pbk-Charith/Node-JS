@@ -15,7 +15,7 @@ Node-JS
  -------------------------------------------------------------------------------- 
  --------------------------------------------------------------------------------
 
-- When you need to run one module in another module only console logs will be executed on the module. if there is Funvtions and some private variables are there the Module protects their variables and functions from leaking into global scope. Then you should use the module export to export it to another module. We have to give the access. 
+- When you need to run one module in another module only console logs will be executed on the module. if there is Functions and some private variables are there the Module protects their variables and functions from leaking into global scope. Then you should use the module export to export it to another module. We have to give the access. 
 
  
  --------------------------------------------------------------------------------
