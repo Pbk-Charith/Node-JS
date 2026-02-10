@@ -1,0 +1,11 @@
+{
+    "name" : "charith",
+    "place" : "Andhra Pradesh",
+    "age" : 22,
+    "hobbies" : ["coding", "gaming", "traveling"],
+    "Favorite Foods" : {
+        "breakfast" : "pancakes",
+        "lunch" : "biryani",
+        "dinner" : "pizza"
+    }
+}

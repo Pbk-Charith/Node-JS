@@ -141,3 +141,132 @@ console.log(num); // 8
 let num = 010; // ❌ SyntaxError: Octal literals are not allowed
 
 ---------------------------------------------------------------------------------
+
+Notes as of 10-02-2026
+
+# Node.js & Modules – Quick Notes
+
+## What is Node.js?
+- **Node.js** is a JavaScript runtime built on **Chrome’s V8 engine**.
+- It allows JavaScript to run **outside the browser**, mainly on servers.
+- Node.js follows an **event-driven architecture** and supports **asynchronous I/O**.
+- All JavaScript engines follow the **ECMAScript standard**.
+
+### JavaScript Engines
+- **V8** – Google Chrome
+- **SpiderMonkey** – Firefox
+
+---
+
+## Global Objects
+- In **frontend (browser)**:
+  - Global object → `window`
+  - Also accessible via `this`, `self`, `frames`
+- In **Node.js**:
+  - Global object → `global`
+- **`globalThis`** is the common global object across:
+  - Browser
+  - Node.js
+  - Other JS environments
+
+---
+
+## Modules in Node.js
+A module is a file that contains reusable code (variables, functions, classes).
+
+There are **two types of modules** in Node.js:
+
+1. **CommonJS (CJS)**
+2. **ES Modules (ESM)**
+
+---
+
+## CommonJS Modules (CJS)
+- Default module system in Node.js (older approach)
+- Uses:
+  - `require()` for importing
+  - `module.exports` for exporting
+- Runs in **non-strict mode**
+- Importing is **synchronous**
+- Mostly used in **Node.js backend**
+
+### Example
+```js
+// export
+module.exports = { x, abc };
+
+// import
+const data = require("./file");
+
+Different Ways to Export :  
+------------------------
+
+module.exports = { x, abc };
+
+module.exports.x = x;
+module.exports.abc = abc;
+
+------------------------------------
+
+ES Modules (ESM)
+
+Modern JavaScript module system
+
+Uses:
+
+import / export
+
+Always runs in strict mode
+
+Importing is asynchronous
+
+Commonly used in React, Angular, frontend apps
+
+// export
+export const x = 10;
+export const abc = () => {};
+
+// import
+import { x, abc } from "./file.js";
+
+----------------------------------------------------
+
+Enabling ES Modules in Node.js
+
+To use ES Modules in Node.js, add this to package.json:
+
+{
+  "type": "module"
+}
+
+After this:
+
+Node treats .js files as ES Modules
+
+import / export will work
+
+--------------------------------------------------------
+
+require() Behavior
+
+require("./file") executes the file immediately
+
+If a file has no exports, it will still run
+
+To access variables/functions from another file:
+
+They must be exported
+
+Otherwise they remain private to that file
+
+-------------------------------------------------------------------------
+
+Key Differences: CommonJS vs ES Modules
+
+| Feature       | CommonJS         | ES Modules          |
+| ------------- | ---------------- | ------------------- |
+| Import syntax | `require()`      | `import`            |
+| Export syntax | `module.exports` | `export`            |
+| Strict mode   | No               | Yes                 |
+| Import type   | Synchronous      | Asynchronous        |
+| Usage         | Node.js (older)  | Modern JS, Frontend |
