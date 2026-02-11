@@ -1,7 +1,7 @@
-function add(a, b) {
-    const sum = a + b;
-    console.log("The sum of a and b is: " + sum);
-    return sum;
+function multiply(a, b) {
+    const result = a * b;
+    console.log("The product of a and b is: " + result);
+    return result;
 }
 
-module.exports = { add }
+module.exports = {multiply};

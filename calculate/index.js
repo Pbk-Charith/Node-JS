@@ -1,4 +1,4 @@
-const {add} = require('./xyz');
+const {multiply} = require('./xyz');
 const {sum} = require('./sum');
 
-module.exports = { add, sum };
+module.exports = { multiply, sum };
