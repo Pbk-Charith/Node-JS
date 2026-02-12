@@ -436,3 +436,72 @@ Executes the function
 Exports are returned
 
 and after the node js wrapped the module inside the IIFE function it will then gives to the v8 engine to execute the file..and now all the functions, variables and methods are executed and if you use any variable, function names outside this IIFE. It wont throw any error...
+
+
+--------------------------------------------------------------------------
+
+How the code works. ?
+
+😉😉😉 Flow Summary
+
+AST (Abstract Syntax Tree)
+
+Your JavaScript code is first parsed into an AST.
+
+Ignition Interpreter
+
+The AST is passed to Ignition.
+
+Ignition converts the code into Bytecode.
+
+The bytecode starts executing immediately.
+
+Execution (First Phase)
+
+The program runs using bytecode.
+
+This allows fast startup.
+
+Hot Code Detection
+
+If some parts of the code run frequently (“HOT”), V8 optimizes them.
+
+TurboFan Compiler
+
+Hot code is sent to TurboFan.
+
+TurboFan compiles it into Optimized Machine Code.
+
+Execution (Optimized Phase)
+
+The optimized machine code runs faster than bytecode.
+
+🧠 In Simple Words
+
+Code → AST → Ignition → Bytecode → Execution
+
+Frequently used code → TurboFan → Optimized Machine Code → Faster Execution
+
+So V8 uses a hybrid approach:
+
+Start fast with interpretation
+
+Then optimize hot code with compilation 🚀
+
+JavaScript Code
+        ↓
+      AST
+        ↓
+  Ignition Interpreter
+        ↓
+     Bytecode
+        ↓
+    Execution
+        ↓
+  (If code is HOT)
+        ↓
+  TurboFan Compiler
+        ↓
+Optimized Machine Code
+        ↓
+  Faster Execution
