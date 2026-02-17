@@ -33,3 +33,18 @@ printA();
 console.log("Last line of the file.");
 
 Promise.resolve().then(() => console.log("Promise3"));
+
+
+// Output:
+// a= 100
+// Last line of the file.
+// process.nextTick1
+// process.nextTick2
+// process.nextTick3
+// process.nextTick4
+// Promise1
+// Promise1
+// Promise3
+// setImmediate
+// File Reading CB
+// Timer expired

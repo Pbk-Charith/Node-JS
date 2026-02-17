@@ -15,3 +15,10 @@ function printA() {
 
 printA();
 console.log("Last line of the file.");
+
+// Output:
+// a= 100
+// Last line of the file.
+// Timer expired
+// setImmediate
+// File Reading CB
