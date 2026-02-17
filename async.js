@@ -14,7 +14,7 @@ setTimeout(() => {
   console.log("setTimeout called after 1 seconds");
 }, 1000);
 
-fs.readFile("./file.txt", (err, data) => {
+fs.readFile("./file.txt", "utf8", (err, data) => {
   console.log("File Data:", data);
 });
 
