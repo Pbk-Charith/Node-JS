@@ -18,10 +18,8 @@
   "bugs": {
     "url": "https://github.com/Pbk-Charith/Node-JS/issues"
   },
-  
-  "homepage": "https://github.com/Pbk-Charith/Node-JS#readme"
-
-  
+  "homepage": "https://github.com/Pbk-Charith/Node-JS#readme",
+  "dependencies": {
+    "mongodb": "^7.1.1"
+  }
 }
-
-
